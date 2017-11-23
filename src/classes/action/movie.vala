@@ -157,7 +157,7 @@ namespace pdfpc {
                 string uri, bool autostart, bool loop, bool noprogress, bool noaudio, int start = 0, int stop = 0, bool temp=false) {
             other.init(area, controller, document);
             ControlledMovie movie = (ControlledMovie) other;
-            movie.loop = loop;
+            movie.loop = true;//loop;
             movie.noprogress = noprogress;
             movie.noaudio = noaudio;
             movie.starttime = start;
