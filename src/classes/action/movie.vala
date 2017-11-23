@@ -176,9 +176,9 @@ namespace pdfpc {
 
                 movie.hide();
 
-                if (autostart) {
+                //if (autostart) {
                     movie.play();
-                }
+                //}
                 return false;
             } );
         }
