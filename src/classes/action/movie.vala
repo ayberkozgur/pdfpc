@@ -601,7 +601,9 @@ namespace pdfpc {
                     window = window,
                     gdk_scale = gdk_scale
                 };
-                video_confs.add(conf);
+                if(conf.display_num != 0){
+                    video_confs.add(conf);
+                }
 
                 n++;
             }
