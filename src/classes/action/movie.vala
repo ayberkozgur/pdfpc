@@ -591,6 +591,10 @@ namespace pdfpc {
                 Gdk.Rectangle rect;
                 int gdk_scale;
                 Window.Fullscreen window;
+                if(n == 0){
+                    n++;
+                    continue;
+                }
                 this.controller.overlay_pos(n, this.area, out rect, out gdk_scale, out window);
                 if (window == null) {
                     break;
@@ -601,9 +605,7 @@ namespace pdfpc {
                     window = window,
                     gdk_scale = gdk_scale
                 };
-                if(conf.display_num != 0){
-                    video_confs.add(conf);
-                }
+                video_confs.add(conf);
 
                 n++;
             }
